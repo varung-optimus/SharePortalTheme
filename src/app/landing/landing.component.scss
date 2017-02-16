@@ -1,0 +1,29 @@
+.carousel {
+    cursor: pointer;
+}
+
+.slide:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out 0s;
+}
+
+.slide {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background-color: transparent;
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.dynamicTile {
+    max-width: 900px;
+}
+
+.dynamicTile .col-sm-2,
+.dynamicTile .col-sm-4 {
+    padding: 2px;
+}
+
+.img-responsive {
+    height: 100%;
+}
