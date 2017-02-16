@@ -12,6 +12,7 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     LandingComponent,
     LoginComponent,
     RegisterComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

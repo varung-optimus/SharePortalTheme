@@ -12,12 +12,12 @@
         <a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-link"></i> <span class="menu-item-parent">Quick Links</span><b class="collapse-sign"><em class="fa fa-minus-square-o"></em></b></a>
         <ul style="display: block;">
           <li class="active">
-            <a href="ajax/dashboard.html" title="Dashboard">
+            <a [routerLink]="['/searchresults']" title="Dashboard">
               <i class="fa fa-lg fa-fw fa-home"></i> &nbsp;
               <span class="menu-item-parent">Home</span></a>
           </li>
           <li class="">
-            <a href="ajax/dashboard-social.html" title="Dashboard"><span class="menu-item-parent">
+            <a [routerLink]="['/upload']" title="Upload"><span class="menu-item-parent">
               <i class="fa fa-lg fa-fw fa-cloud-upload"></i> &nbsp;Upload</span></a>
           </li>
           <li class="">

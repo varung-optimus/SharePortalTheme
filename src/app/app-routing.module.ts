@@ -5,6 +5,7 @@ import { LandingComponent } from 'app/landing/landing.component';
 import { LoginComponent } from 'app/login/login.component';
 import { RegisterComponent } from 'app/register/register.component';
 import { SearchResultsComponent } from 'app/search-results/search-results.component';
+import { UploadComponent } from 'app/upload/upload.component';
 
 /* tslint:disable */
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
     { path: 'index', component: LandingComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'searchresults', component: SearchResultsComponent }
+    { path: 'searchresults', component: SearchResultsComponent },
+    { path: 'upload', component: UploadComponent }
 ];
 
 @NgModule({
