@@ -1,164 +1,168 @@
-<app-sidebar></app-sidebar>
-<br />
-<div class="col-md-offset-2">
-  <div class="container widget-body fuelux">
-    <div class="wizard">
-      <ul class="steps" style="margin-left: 0">
-        <li data-target="#step1" class="active">
-          <span class="badge badge-info">1</span>Upload Policy<span class="chevron"></span>
-        </li>
-        <li data-target="#step2" class="">
-          <span class="badge">2</span>File Information and Upload<span class="chevron"></span>
-        </li>
-        <li data-target="#step3" class="">
-          <span class="badge">3</span>Finish
-        </li>
-      </ul>
-
-    </div>
-    <div class="step-content">
-      <form class="form-horizontal" id="fuelux-wizard" method="post">
-
-        <div class="step-pane active" id="step1">
-          <h3><strong>Step 1 </strong> - Validation states</h3>
-
-          <!-- wizard form starts here -->
-          <fieldset>
-
-            <div class="form-group has-warning">
-              <label class="col-md-2 control-label">Input warning</label>
-              <div class="col-md-10">
-                <div class="input-group">
-                  <input class="form-control" type="text">
-                  <span class="input-group-addon"><i class="fa fa-warning"></i></span>
+<div class="container col-md-offset-2 col-md-8">
+  <div class="wizard-container">
+    <div class="card wizard-card" data-color="red" id="wizardProfile">
+      <form action="" method="" novalidate="novalidate">
+        <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
+        <div class="wizard-header">
+          <h3 class="wizard-title">
+            Build Your Profile
+          </h3>
+          <h5>This information will let us know more about you.</h5>
+        </div>
+        <div class="wizard-navigation">
+          <ul class="nav nav-pills">
+            <li style="width: 33.3333%;" class="active">
+              <a href="#about" data-toggle="tab" aria-expanded="true">About</a>
+            </li>
+            <li style="width: 33.3333%;">
+              <a href="#account" data-toggle="tab">Account</a>
+            </li>
+            <li style="width: 33.3333%;">
+              <a href="#address" data-toggle="tab">Address</a>
+            </li>
+          </ul>
+          <div class="moving-tab" style="width: 161.563px; transform: translate3d(-8px, 0px, 0px); transition: transform 0s;">About</div>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active" id="about">
+            <div class="row">
+              <h4 class="info-text"> Let's start with the basic information (with validation)</h4>
+              <div class="col-sm-4 col-sm-offset-1">
+                <div class="picture-container">
+                  <div class="picture">
+                    <img src="app/img/avatars/male.png" class="picture-src" id="wizardPicturePreview" title="">
+                    <input type="file" id="wizard-picture">
+                  </div>
+                  <h6>Choose Picture</h6>
                 </div>
-                <span class="help-block">Something may have gone wrong</span>
               </div>
-
-            </div>
-
-            <div class="form-group has-error">
-              <label class="col-md-2 control-label">Input error</label>
-              <div class="col-md-10">
+              <div class="col-sm-6">
                 <div class="input-group">
-                  <input class="form-control" type="text">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
+                  <span class="input-group-addon">
+                                                            <i class="material-icons">face</i>
+                                                        </span>
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label">First Name
+                                                                <small>(required)</small>
+                                                            </label>
+                    <input name="firstname" type="text" class="form-control">
+                    <span class="material-input"></span></div>
                 </div>
-                <span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
-              </div>
-            </div>
-
-            <div class="form-group has-success">
-              <label class="col-md-2 control-label">Input success</label>
-              <div class="col-md-10">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                  <input class="form-control" type="text">
-                  <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                  <span class="input-group-addon">
+                                                            <i class="material-icons">record_voice_over</i>
+                                                        </span>
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label">Last Name
+                                                                <small>(required)</small>
+                                                            </label>
+                    <input name="lastname" type="text" class="form-control">
+                    <span class="material-input"></span></div>
                 </div>
-                <span class="help-block">Something may have gone wrong</span>
+              </div>
+              <div class="col-lg-10 col-lg-offset-1">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                                                            <i class="material-icons">email</i>
+                                                        </span>
+                  <div class="form-group label-floating is-empty">
+                    <label class="control-label">Email
+                                                                <small>(required)</small>
+                                                            </label>
+                    <input name="email" type="email" class="form-control">
+                    <span class="material-input"></span></div>
+                </div>
               </div>
             </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-2">Input icon success</label>
-              <div class="col-md-10">
-                <div class="row">
-                  <div class="col-sm-12">
-
-                    <div class="input-icon-left">
-                      <i class="fa txt-color-green fa-check"></i>
-                      <input class="form-control" placeholder="Left Icon" type="text">
+          </div>
+          <div class="tab-pane" id="account">
+            <h4 class="info-text"> What are you doing? (checkboxes) </h4>
+            <div class="row">
+              <div class="col-lg-10 col-lg-offset-1">
+                <div class="col-sm-4">
+                  <div class="choice" data-toggle="wizard-checkbox">
+                    <input type="checkbox" name="jobb" value="Design">
+                    <div class="icon">
+                      <i class="fa fa-pencil"></i>
                     </div>
-
+                    <h6>Design</h6>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="choice" data-toggle="wizard-checkbox">
+                    <input type="checkbox" name="jobb" value="Code">
+                    <div class="icon">
+                      <i class="fa fa-terminal"></i>
+                    </div>
+                    <h6>Code</h6>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="choice" data-toggle="wizard-checkbox">
+                    <input type="checkbox" name="jobb" value="Develop">
+                    <div class="icon">
+                      <i class="fa fa-laptop"></i>
+                    </div>
+                    <h6>Develop</h6>
                   </div>
                 </div>
               </div>
             </div>
-
-          </fieldset>
-
-        </div>
-
-        <div class="step-pane" id="step2">
-          <h3><strong>Step 2 </strong> - Alerts</h3>
-
-          <div class="alert alert-warning fade in">
-            <button class="close" data-dismiss="alert">
-											×
-										</button>
-            <i class="fa-fw fa fa-warning"></i>
-            <strong>Warning</strong> Your monthly traffic is reaching limit.
           </div>
-
-          <div class="alert alert-success fade in">
-            <button class="close" data-dismiss="alert">
-											×
-										</button>
-            <i class="fa-fw fa fa-check"></i>
-            <strong>Success</strong> The page has been added.
+          <div class="tab-pane" id="address">
+            <div class="row">
+              <div class="col-sm-12">
+                <h4 class="info-text"> Are you living in a nice area? </h4>
+              </div>
+              <div class="col-sm-7 col-sm-offset-1">
+                <div class="form-group label-floating is-empty">
+                  <label class="control-label">Street Name</label>
+                  <input type="text" class="form-control">
+                  <span class="material-input"></span></div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group label-floating is-empty">
+                  <label class="control-label">Street No.</label>
+                  <input type="text" class="form-control">
+                  <span class="material-input"></span></div>
+              </div>
+              <div class="col-sm-5 col-sm-offset-1">
+                <div class="form-group label-floating is-empty">
+                  <label class="control-label">City</label>
+                  <input type="text" class="form-control">
+                  <span class="material-input"></span></div>
+              </div>
+              <div class="col-sm-5">
+                <div class="form-group label-floating is-empty">
+                  <label class="control-label">Country</label>
+                  <select name="country" class="form-control">
+                                                            <option disabled="" selected=""></option>
+                                                            <option value="Afghanistan"> Afghanistan </option>
+                                                            <option value="Albania"> Albania </option>
+                                                            <option value="Algeria"> Algeria </option>
+                                                            <option value="American Samoa"> American Samoa </option>
+                                                            <option value="Andorra"> Andorra </option>
+                                                            <option value="Angola"> Angola </option>
+                                                            <option value="Anguilla"> Anguilla </option>
+                                                            <option value="Antarctica"> Antarctica </option>
+                                                            <option value="...">...</option>
+                                                        </select>
+                  <span class="material-input"></span></div>
+              </div>
+            </div>
           </div>
-
-          <div class="alert alert-info fade in">
-            <button class="close" data-dismiss="alert">
-											×
-										</button>
-            <i class="fa-fw fa fa-info"></i>
-            <strong>Info!</strong> You have 198 unread messages.
+        </div>
+        <div class="wizard-footer">
+          <div class="pull-right">
+            <input type="button" class="btn btn-next btn-fill btn-primary btn-wd" name="next" value="Next">
+            <input type="button" class="btn btn-finish btn-fill btn-red btn-wd" name="finish" value="Finish" style="display: none;">
           </div>
-
-          <div class="alert alert-danger fade in">
-            <button class="close" data-dismiss="alert">
-											×
-										</button>
-            <i class="fa-fw fa fa-times"></i>
-            <strong>Error!</strong> The daily cronjob has failed.
+          <div class="pull-left">
+            <input type="button" class="btn btn-previous btn-fill btn-default btn-wd disabled" name="previous" value="Previous">
           </div>
-
-        </div>
-
-        <div class="step-pane" id="step3">
-          <h3><strong>Step 3 </strong> - Wizard continued</h3>
-          <br>
-          <br>
-          <h1 class="text-center text-primary"> This will be your Step 3 </h1>
-          <br>
-          <br>
-          <br>
-          <br>
-        </div>
-
-        <div class="step-pane" id="step4">
-          <h3><strong>Step 4 </strong> - Wizard continued...</h3>
-          <br>
-          <br>
-          <h1 class="text-center text-danger"> This will be your Step 4 </h1>
-          <br>
-          <br>
-          <br>
-          <br>
-        </div>
-
-        <div class="step-pane" id="step5">
-          <h3><strong>Step 5 </strong> - Finished!</h3>
-          <br>
-          <br>
-          <h1 class="text-center text-success"><i class="fa fa-check"></i> Congratulations!
-            <br>
-            <small>Click finish to end wizard</small></h1>
-          <br>
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="actions pull-right">
-          <button type="button" class="btn btn-sm btn-primary btn-prev" disabled="disabled">
-									<i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Prev
-								</button>
-          <button type="button" class="btn btn-sm btn-success btn-next" data-last="Finish">Next&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
+          <div class="clearfix"></div>
         </div>
       </form>
     </div>
-
   </div>
 </div>

@@ -1,161 +1,90 @@
-<div class="container widget-body fuelux">
-
-  <div class="wizard">
-    <ul class="steps" style="margin-left: 0">
-      <li data-target="#step1" class="active">
-        <span class="badge badge-info">1</span>Step 1<span class="chevron"></span>
-      </li>
-      <li data-target="#step2" class="">
-        <span class="badge">2</span>Step 2<span class="chevron"></span>
-      </li>
-      <li data-target="#step3" class="">
-        <span class="badge">3</span>Step 3
-      </li>
-    </ul>
-    
-  </div>
-  <div class="step-content">
-    <form class="form-horizontal" id="fuelux-wizard" method="post">
-
-      <div class="step-pane active" id="step1">
-        <h3><strong>Step 1 </strong> - Validation states</h3>
-
-        <!-- wizard form starts here -->
-        <fieldset>
-
-          <div class="form-group has-warning">
-            <label class="col-md-2 control-label">Input warning</label>
-            <div class="col-md-10">
-              <div class="input-group">
-                <input class="form-control" type="text">
-                <span class="input-group-addon"><i class="fa fa-warning"></i></span>
-              </div>
-              <span class="help-block">Something may have gone wrong</span>
+<div class="col-md-10 col-md-offset-1">
+  <div class="card card-signup">
+    <h2 class="card-title text-center">Register</h2>
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <div class="card-content">
+          <div class="info info-horizontal">
+            <div class="icon icon-rose">
+              <i class="material-icons">timeline</i>
             </div>
-
-          </div>
-
-          <div class="form-group has-error">
-            <label class="col-md-2 control-label">Input error</label>
-            <div class="col-md-10">
-              <div class="input-group">
-                <input class="form-control" type="text">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
-              </div>
-              <span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
+            <div class="description">
+              <h4 class="info-title">Marketing</h4>
+              <p class="description">
+                We've created the marketing campaign of the website. It was a very interesting collaboration.
+              </p>
             </div>
           </div>
-
-          <div class="form-group has-success">
-            <label class="col-md-2 control-label">Input success</label>
-            <div class="col-md-10">
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                <input class="form-control" type="text">
-                <span class="input-group-addon"><i class="fa fa-check"></i></span>
-              </div>
-              <span class="help-block">Something may have gone wrong</span>
+          <div class="info info-horizontal">
+            <div class="icon icon-primary">
+              <i class="material-icons">code</i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">Fully Coded in HTML5</h4>
+              <p class="description">
+                We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.
+              </p>
             </div>
           </div>
-
-          <div class="form-group">
-            <label class="control-label col-md-2">Input icon success</label>
-            <div class="col-md-10">
-              <div class="row">
-                <div class="col-sm-12">
-
-                  <div class="input-icon-left">
-                    <i class="fa txt-color-green fa-check"></i>
-                    <input class="form-control" placeholder="Left Icon" type="text">
-                  </div>
-
-                </div>
-              </div>
+          <div class="info info-horizontal">
+            <div class="icon icon-info">
+              <i class="material-icons">group</i>
+            </div>
+            <div class="description">
+              <h4 class="info-title">Built Audience</h4>
+              <p class="description">
+                There is also a Fully Customizable CMS Admin Dashboard for this product.
+              </p>
             </div>
           </div>
-
-        </fieldset>
-
-      </div>
-
-      <div class="step-pane" id="step2">
-        <h3><strong>Step 2 </strong> - Alerts</h3>
-
-        <div class="alert alert-warning fade in">
-          <button class="close" data-dismiss="alert">
-											×
-										</button>
-          <i class="fa-fw fa fa-warning"></i>
-          <strong>Warning</strong> Your monthly traffic is reaching limit.
         </div>
-
-        <div class="alert alert-success fade in">
-          <button class="close" data-dismiss="alert">
-											×
-										</button>
-          <i class="fa-fw fa fa-check"></i>
-          <strong>Success</strong> The page has been added.
+      </div>
+      <div class="col-md-5">
+        <div class="social text-center">
+          <button class="btn btn-just-icon btn-round btn-twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </button>
+          <button class="btn btn-just-icon btn-round btn-dribbble">
+                                            <i class="fa fa-dribbble"></i>
+                                        </button>
+          <button class="btn btn-just-icon btn-round btn-facebook">
+                                            <i class="fa fa-facebook"> </i>
+                                        </button>
+          <h4> or be classical </h4>
         </div>
-
-        <div class="alert alert-info fade in">
-          <button class="close" data-dismiss="alert">
-											×
-										</button>
-          <i class="fa-fw fa fa-info"></i>
-          <strong>Info!</strong> You have 198 unread messages.
-        </div>
-
-        <div class="alert alert-danger fade in">
-          <button class="close" data-dismiss="alert">
-											×
-										</button>
-          <i class="fa-fw fa fa-times"></i>
-          <strong>Error!</strong> The daily cronjob has failed.
-        </div>
-
+        <form class="form" method="" action="">
+          <div class="card-content">
+            <div class="input-group">
+              <span class="input-group-addon">
+                                                    <i class="material-icons">face</i>
+                                                </span>
+              <div class="form-group is-empty"><input type="text" class="form-control" placeholder="First Name..."><span class="material-input"></span></div>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">
+                                                    <i class="material-icons">email</i>
+                                                </span>
+              <div class="form-group is-empty"><input type="text" class="form-control" placeholder="Email..."><span class="material-input"></span></div>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">
+                                                    <i class="material-icons">lock_outline</i>
+                                                </span>
+              <div class="form-group is-empty"><input type="password" placeholder="Password..." class="form-control"><span class="material-input"></span></div>
+            </div>
+            <!-- If you want to add a checkbox to this form, uncomment this code -->
+            <div class="checkbox">
+              <label>
+                                                    <input type="checkbox" name="optionsCheckboxes" checked=""><span class="checkbox-material"><span class="check"></span></span> I agree to the
+                                                    <a href="#something">terms and conditions</a>.
+                                                </label>
+            </div>
+          </div>
+          <div class="footer text-center">
+            <a href="#pablo" class="btn btn-primary btn-round">Get Started</a>
+          </div>
+        </form>
       </div>
-
-      <div class="step-pane" id="step3">
-        <h3><strong>Step 3 </strong> - Wizard continued</h3>
-        <br>
-        <br>
-        <h1 class="text-center text-primary"> This will be your Step 3 </h1>
-        <br>
-        <br>
-        <br>
-        <br>
-      </div>
-
-      <div class="step-pane" id="step4">
-        <h3><strong>Step 4 </strong> - Wizard continued...</h3>
-        <br>
-        <br>
-        <h1 class="text-center text-danger"> This will be your Step 4 </h1>
-        <br>
-        <br>
-        <br>
-        <br>
-      </div>
-
-      <div class="step-pane" id="step5">
-        <h3><strong>Step 5 </strong> - Finished!</h3>
-        <br>
-        <br>
-        <h1 class="text-center text-success"><i class="fa fa-check"></i> Congratulations!
-          <br>
-          <small>Click finish to end wizard</small></h1>
-        <br>
-        <br>
-        <br>
-        <br>
-      </div>
-      <div class="actions pull-right">
-      <button type="button" class="btn btn-sm btn-primary btn-prev" disabled="disabled">
-									<i class="fa fa-arrow-left"></i>&nbsp;&nbsp;Prev
-								</button>
-      <button type="button" class="btn btn-sm btn-success btn-next" data-last="Finish">Next&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button>
     </div>
-    </form>
   </div>
-
 </div>

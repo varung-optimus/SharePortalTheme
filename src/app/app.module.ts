@@ -31,7 +31,9 @@ import { UploadComponent } from './upload/upload.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: 'Window',  useValue: window }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

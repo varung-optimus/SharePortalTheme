@@ -1,14 +1,59 @@
-<header id="header">
+<nav class="navbar navbar-default navbar-danger" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+    		</button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
 
-  <div id="logo-group">
-    <span id="logo" [routerLink]="['/index']"> 
-      <img src="app/img/logo-o.png" alt="EarthLink Share"> 
-    </span>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a [routerLink]="['/searchresults']" title="Dashboard">
+            <i class="fa fa-lg fa-fw fa-home"></i> &nbsp;
+            <span class="menu-item-parent">Home</span></a>
+        </li>
+        <li class="">
+          <a [routerLink]="['/upload']" title="Upload"><span class="menu-item-parent">
+              <i class="fa fa-lg fa-fw fa-cloud-upload"></i> &nbsp;Upload</span></a>
+        </li>
+        <li class="">
+          <a href="ajax/dashboard-social.html" title="Dashboard"><span class="menu-item-parent">
+              <i class="fa fa-lg fa-fw fa-star"></i> &nbsp;Featured Files</span></a>
+        </li>
+        <li class="">
+          <a href="ajax/dashboard-social.html" title="Dashboard"><span class="menu-item-parent">
+              <i class="fa fa-lg fa-fw fa-file-movie-o"></i> &nbsp;Cinemana</span></a>
+        </li>
+        <li class="">
+          <a href="ajax/dashboard-social.html" title="Dashboard"><span class="menu-item-parent">
+              <i class="fa fa-lg fa-fw fa-tv"></i> &nbsp;EarthLink TV</span></a>
+        </li>
+        <li class="">
+          <a href="ajax/dashboard-social.html" title="Dashboard"><span class="menu-item-parent">
+              <i class="fa fa-lg fa-fw fa-gamepad"></i> &nbsp;Games</span></a>
+        </li>
+        <li class="">
+          <a href="ajax/dashboard-social.html" title="Dashboard"><span class="menu-item-parent">
+              <i class="fa fa-lg fa-fw fa-question"></i> &nbsp;FAQ</span></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a [routerLink]="['/login']" title="Login">
+            <i class="fa fa-lg fa-fw fa-key"></i> &nbsp;
+            <span class="menu-item-parent">Login</span></a>
+        </li>
+        <li>
+          <a [routerLink]="['/register']" title="Register">
+            <i class="fa fa-lg fa-fw fa-user-plus"></i> &nbsp;
+            <span class="menu-item-parent">Register</span></a>
+        </li>
+      </ul>
+    </div>
   </div>
-
-  <span id="extr-page-header-space"> 
-    <a [routerLink]="['/login']" class="btn btn-danger"><i class="fa fa-key"></i> &nbsp; Login</a>
-    <a [routerLink]="['/register']" class="btn btn-danger"><i class="fa fa-user-plus"></i> &nbsp; Create account</a>
-    </span>
-
-</header>
+</nav>

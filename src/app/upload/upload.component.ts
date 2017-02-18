@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-upload',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject('Window') window: Window) { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    (<any>window).demo.initMaterialWizard();
   }
 
 }
