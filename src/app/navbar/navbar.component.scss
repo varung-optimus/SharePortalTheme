@@ -5,3 +5,60 @@
 #logo img {
     width: 50px;
 }
+
+.logo {
+    width: 100px;
+    margin-top: 5px;
+}
+
+.navbar {
+    border-bottom: 1px solid #ccc;
+    z-index: 10000000;
+}
+
+.search-panel {
+    animation: height 1s linear;
+    height: 0;
+    overflow-y: hidden;
+	max-height: 0px; /* approximate max height */
+
+	transition-property: all;
+	transition-duration: 3s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+    button {
+        margin: 0 10px;
+    }
+}
+
+.activated {
+    // display: block;
+    // opacity: 1;
+    height: auto;
+    max-height: 500px;
+    transition-property: all;
+	transition-duration: 3s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.search-button {
+    cursor: pointer;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

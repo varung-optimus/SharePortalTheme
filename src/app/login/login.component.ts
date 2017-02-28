@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  public isNewUser = false;
+  public isForgotPasswordEnabled = false;
+  
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  onSignUpClicked() {
+    this.isNewUser = true;
+    this.isForgotPasswordEnabled = false;
   }
 
 }

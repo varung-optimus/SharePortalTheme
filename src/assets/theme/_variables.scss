@@ -23,7 +23,8 @@ $gray-mid-light:         lighten($black, 75%);   // #ccc
 $gray-lighter:           lighten($black, 93.5%); // #eee
 $gray-lightest:          lighten($black, 95.5%); // #fafafa
 
-$brand-primary:         #3276b1;
+// $brand-primary:         #3276b1;
+$brand-primary:         #ed2939;
 $brand-success:         #739e73;
 $brand-info:            #57889C;
 $brand-warning:         #C79121;
@@ -34,7 +35,7 @@ $brand-danger:          #A90329;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff;
+$body-bg:               #eee;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark;
 
@@ -203,10 +204,10 @@ $dropdown-fallback-border:       #ccc;
 $dropdown-divider-bg:            #e5e5e5;
 
 $dropdown-link-color:            $gray-dark;
-$dropdown-link-hover-color:      #fff;
+$dropdown-link-hover-color:      $brand-primary;
 $dropdown-link-hover-bg:         #f5f5f5;
 
-$dropdown-link-active-color:     #fff;
+$dropdown-link-active-color:     $brand-primary;
 $dropdown-link-active-bg:        $component-active-bg;
 
 $dropdown-link-disabled-color:   $gray-light;
@@ -313,13 +314,13 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2));
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height:       340px;
 
-$navbar-default-color:             #777;
-$navbar-default-bg:                #f8f8f8;
+$navbar-default-color:             #ed2939;
+$navbar-default-bg:                #fff;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%);
 
 // Navbar links
 $navbar-default-link-color:                #777;
-$navbar-default-link-hover-color:          #333;
+$navbar-default-link-hover-color:          #ed2939;
 $navbar-default-link-hover-bg:             transparent;
 $navbar-default-link-active-color:         #555;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%);
@@ -794,10 +795,10 @@ $animation-ajax-dropdown:	      "flipInY";
 $base-url: 						      "app/img";
 //urage: background-image: url("#{$base-url}/images/bg.png");
 
-$html-background-image:			  "mybg.png";
+// $html-background-image:			  "mybg.png";
 $html-background-color:			  $white;
 
-$body-background-image:			  "mybg.png";
+// $body-background-image:			  "mybg.png";
 $body-background-color:			  $white;
 
 //== HEADER

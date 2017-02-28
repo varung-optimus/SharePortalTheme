@@ -1,1 +1,17 @@
 // need to override just one or two small stylistic things and don't want to edit the main .less files?  Add those overrides here
+
+.ui-carousel-header {
+    background: #ed2939;
+    padding: 10px;
+    color: white;
+    font-size: 14px
+}
+.ui-carousel-item {
+    height: 150px;
+    img {
+        width: 100%;
+        max-height: 100px;
+        min-height: 100px;
+        height: 100px;
+    }
+}

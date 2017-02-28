@@ -1,2 +1,9 @@
 // Add anything custom here -- mixins, variable overrides.
 // by adding things here instead of overriding existing .LESS files, it makes merging changes on product updates easier
+
+.ui-carousel-header {
+    background: #ed2939;
+    padding: 10px;
+    color: white;
+    font-size: 14px
+}

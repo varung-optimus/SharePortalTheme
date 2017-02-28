@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'index', component: LandingComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'searchresults', component: SearchResultsComponent },
+    { path: 'results', component: SearchResultsComponent },
     { path: 'upload', component: UploadComponent }
 ];
 
