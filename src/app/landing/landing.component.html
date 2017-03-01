@@ -1,138 +1,397 @@
-<!--<div id="myCarousel-2" class="carousel slide" data-smart-ride-carousel data-interval="3000">
-  <div class="carousel-inner">
-    <div class="item active">
-      <img [src]="activeImage" alt="">
+
+<div class="container banner no-padding">
+  <div id="explore" class="col-sm-12 no-padding">
+    <div class="col-sm-3">
+      <app-landing-sidebar></app-landing-sidebar>
     </div>
-  </div>
-</div>
-
-<div class="col-sm-12 no-padding">
-  <a href="#explore">
-    <button class="btn btn-primary icon-bottom" type="button">
-      <i class="fa fa-arrow-down"></i> &nbsp; Explore
-    </button>
-  </a>
-  <br /> <br />
-</div>-->
-
-<div id="explore" class="col-sm-12 no-padding banner">
-
-  <div class="">
-    <div class="col-sm-12 no-padding z-index">
-      <br /><br />
-      <div class="col-sm-offset-2 col-sm-8">
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center movies no-padding">
-            <h5>Movies</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center applications no-padding">
-            <h5>Applications</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center games no-padding">
-            <h5>Games</h5>
-          </div>
-        </div>
+    <div class="col-sm-9 main-area">
+      <div class="col-sm-12 no-padding z-index">
         <br />
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center documents no-padding">
-            <h5>Documents</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center tv no-padding">
-            <h5>TV Series</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center music no-padding">
-            <h5>Music</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <button (click)="isExtraCategoryVisible=true" *ngIf="!isExtraCategoryVisible" class="btn btn-primary icon-bottom" type="button">
-            Show More
-          </button>
-        <br />
-      </div>
-      <div class="col-sm-offset-2 col-sm-8" *ngIf="isExtraCategoryVisible">
-        <div class="col-sm-4 wow flipInY">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center tutorials no-padding">
-            <h5>Tutorials</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow flipInY">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center sports no-padding">
-            <h5>Sports</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow flipInY">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center photos no-padding">
-            <h5>Photos</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow flipInY">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center videos no-padding">
-            <h5>Videos</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow flipInY">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center mobile no-padding">
-            <h5>Mobile</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow flipInY">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center viewall no-padding">
-            <h5>View All</h5>
-          </div>
-        </div>
-      </div>
-      
-      <!--<div class="col-sm-12" *ngIf="isExtraCategoryVisible">
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center tv no-padding">
-            <h5>TV Series</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center music no-padding">
-            <h5>Music</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center tutorials no-padding">
-            <h5>Tutorials</h5>
-          </div>
-        </div>
-        <div class="col-sm-4 wow bounceIn">
-          <div [routerLink]="['/results']" class="well well-sm bg-color-white txt-color-white text-center sports no-padding">
-            <h5>Sports</h5>
-          </div>
-        </div>
-      </div>-->
-    </div>
-  </div>
-</div>
-<div class="col-sm-12 no-padding banner">
-  <div class="">
-    <br /><br />
-    <div class="col-sm-offset-2 col-sm-8 z-index">
-      <p-carousel headerText="Recently Uploaded" numVisible="6" [value]="items">
-        <template let-item pTemplate="item">
-          <div class="ui-grid ui-grid-responsive">
-            <div class="ui-grid-row">
-              <div class="ui-grid-col-12"><img src="app/img/realestate/{{item.img}}.png" /></div>
+        <div>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+              <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="item">
+                <img class="first-slide" src="app/img/realestate/1.png" alt="First slide">
+                <div class="">
+                  <div class="carousel-caption">
+                    <h1>Example headline.</h1>
+                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon
+                      buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <p><a class="btn btn-lg btn-primary" [routerLink]="['/login']" role="button">Sign up today</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="item active">
+                <img class="second-slide" src="app/img/realestate/2.png" alt="Second slide">
+                <div class="">
+                  <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                      metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" [routerLink]="['/login']" role="button">Learn more</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <img class="third-slide" src="app/img/realestate/3.png" alt="Third slide">
+                <div class="">
+                  <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                      metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" [routerLink]="['/results']" role="button">Browse gallery</a></p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="ui-grid-row col-sm-12">
-              <div class="col-sm-12 text-center item-name">{{item.name}}</div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-12 no-padding">
+          <br />
+          <h3 class="header featured">
+            Choose Category
+          </h3>
+          <div class="col-sm-12 no-padding">
+            <div class="col-sm-12 no-padding tile-panel">
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Watch Movies here
+                </div>
+                <img src="app/img/realestate/movies.png" />
+                <h3> Movies (1200)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Applications
+                </div>
+                <img src="app/img/realestate/applications.png" />
+                <h3> Applications (670)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Popular Games
+                </div>
+                <img src="app/img/realestate/games.png" />
+                <h3> Games (1000)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Content tagged as documents
+                </div>
+                <img src="app/img/realestate/documents.png" />
+                <h3> Documents (1670)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Watch TV Series here
+                </div>
+                <img src="app/img/realestate/tv.png" />
+                <h3> TV Series (3520)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Enjoy music
+                </div>
+                <img src="app/img/realestate/music.png" />
+                <h3> Music (2372)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Watch Tutorials here
+                </div>
+                <img src="app/img/realestate/tutorials.png" />
+                <h3> Tutorials (670)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Sports category
+                </div>
+                <img src="app/img/realestate/sports.png" />
+                <h3> Sports (670)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Watch Photos here
+                </div>
+                <img src="app/img/realestate/photos.png" />
+                <h3> Photos (670)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Watch Videos here
+                </div>
+                <img src="app/img/realestate/videos.png" />
+                <h3> Videos (670)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  Content tagged under Mobile
+                </div>
+                <img src="app/img/realestate/mobile.png" />
+                <h3> Mobile (670)</h3>
+              </div>
+              <div class="square" div class="square" [routerLink]="['/results']">
+                <div class="overlay">
+                  View All Categories
+                </div>
+                <img src="app/img/realestate/view-icon.png" />
+                <h3> View All (1000)</h3>
+              </div>
             </div>
           </div>
-        </template>
-      </p-carousel>
+        </div>
+        <div class="col-sm-12 no-padding">
+          <br />
+          <h3 class="header">
+            Recently Uploaded
+          </h3>
+          <div>
+            <div class="col-sm-12 no-padding tile-panel">
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Avengers - Civil War
+                  </div>
+                </a>
+                <img src="app/img/realestate/1.png" />
+                <h3> Avengers - Civil War </h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Superbike
+                  </div>
+                </a>
+                <img src="app/img/realestate/2.png" />
+                <h3> Superbike</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Popular Games
+                  </div>
+                </a>
+                <img src="app/img/realestate/3.png" />
+                <h3> Fifa 2016</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Play Assasin's Creed'
+                  </div>
+                </a>
+                <img src="app/img/realestate/4.png" />
+                <h3> Assasin's Creed</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Documentary on Langkawi trip
+                  </div>
+                </a>
+                <img src="app/img/realestate/5.png" />
+                <h3> A Trip to Langkawi</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Tutorial on saving money
+                  </div>
+                </a>
+                <img src="app/img/realestate/6.png" />
+                <h3> Lavish lifestyle</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Avengers - Civil War
+                  </div>
+                </a>
+                <img src="app/img/realestate/1.png" />
+                <h3> Avengers - Civil War </h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Superbike
+                  </div>
+                </a>
+                <img src="app/img/realestate/2.png" />
+                <h3> Superbike</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Popular Games
+                  </div>
+                </a>
+                <img src="app/img/realestate/3.png" />
+                <h3> Fifa 2016</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Play Assasin's Creed'
+                  </div>
+                </a>
+                <img src="app/img/realestate/4.png" />
+                <h3> Assasin's Creed</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Documentary on Langkawi trip
+                  </div>
+                </a>
+                <img src="app/img/realestate/5.png" />
+                <h3> A Trip to Langkawi</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Tutorial on saving money
+                  </div>
+                </a>
+                <img src="app/img/realestate/6.png" />
+                <h3> Lavish lifestyle</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 no-padding">
+          <br />
+          <h3 class="header">
+            Trending
+          </h3>
+          <div>
+            <div class="col-sm-12 no-padding tile-panel">
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Avengers - Civil War
+                  </div>
+                </a>
+                <img src="app/img/realestate/1.png" />
+                <h3> Avengers - Civil War </h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Superbike
+                  </div>
+                </a>
+                <img src="app/img/realestate/2.png" />
+                <h3> Superbike</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Popular Games
+                  </div>
+                </a>
+                <img src="app/img/realestate/3.png" />
+                <h3> Fifa 2016</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Play Assasin's Creed'
+                  </div>
+                </a>
+                <img src="app/img/realestate/4.png" />
+                <h3> Assasin's Creed</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Documentary on Langkawi trip
+                  </div>
+                </a>
+                <img src="app/img/realestate/5.png" />
+                <h3> A Trip to Langkawi</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Tutorial on saving money
+                  </div>
+                </a>
+                <img src="app/img/realestate/6.png" />
+                <h3> Lavish lifestyle</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Avengers - Civil War
+                  </div>
+                </a>
+                <img src="app/img/realestate/1.png" />
+                <h3> Avengers - Civil War </h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Superbike
+                  </div>
+                </a>
+                <img src="app/img/realestate/2.png" />
+                <h3> Superbike</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Popular Games
+                  </div>
+                </a>
+                <img src="app/img/realestate/3.png" />
+                <h3> Fifa 2016</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Play Assasin's Creed'
+                  </div>
+                </a>
+                <img src="app/img/realestate/4.png" />
+                <h3> Assasin's Creed</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Documentary on Langkawi trip
+                  </div>
+                </a>
+                <img src="app/img/realestate/5.png" />
+                <h3> A Trip to Langkawi</h3>
+              </div>
+              <div class="square" div class="square">
+                <a href="#myModal" data-toggle="modal">
+                  <div class="overlay">
+                    Tutorial on saving money
+                  </div>
+                </a>
+                <img src="app/img/realestate/6.png" />
+                <h3> Lavish lifestyle</h3>
+              </div>
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
     </div>
   </div>
 </div>

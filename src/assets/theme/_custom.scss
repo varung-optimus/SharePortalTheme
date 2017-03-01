@@ -7,3 +7,11 @@
     color: white;
     font-size: 14px
 }
+
+.modal-backdrop {
+    z-index: 10000000 !important;
+}
+
+.modal-open .modal {
+    z-index: 100000000 !important;
+}

@@ -7,8 +7,12 @@
 }
 
 .carousel {
-    max-height: 85%;
-    max-height: 85vh;
+    max-height: 35%;
+    max-height: 35vh;
+}
+
+.carousel-caption {
+    top: 5px;
 }
 
 .item img {
@@ -61,35 +65,22 @@
 }
 
 .banner {
-    // background-image: url('app/img/realestate/banner.png');
     width: 100%;
-    min-height: 300px;
-    height: auto;
-    // max-height: 400px;
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background: #000;
-
+    background: #ececec;
+    height: 100%;
+    min-height: 100%;
+    border: 1px solid #bdbdbd;
 }
 
-.banner:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.3;
-    background-image: url('app/img/realestate/banner.png');
-     background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+.main-area {
+    border-left: 1px solid #bdbdbd;
+}
+
+.header {
+    color: #777;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 .z-index {
@@ -181,13 +172,64 @@
     background-size: cover;
 }
 
-.header {
-    background: #ed2939;
-    padding: 10px;
-    color: white;
-    font-size: 14px;
+.tile-panel {
+    box-shadow: inset 3px 3px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+    border-top: 1px solid #c6c6c6;
+    border-left: 1px solid #c6c6c6;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.square {
+    cursor: pointer;
+    position: relative;
+    width: 25%;
+    height: auto;
+    margin:0;
+    border-bottom: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+    background: rgb(248, 248, 248);
+    &:hover {
+        .overlay {
+            opacity: 1;
+            animation: fadeIn 0.3s;
+        }
+    }
+    .overlay {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        color: white;
+        z-index: 100;
+        text-align: center;
+        padding-top: 30%;
+        opacity: 0;
+    }
+    img {
+        width: 95%;
+        margin: 2.5%;
+        border: 1px solid #ddd;
+        height: 100px;
+        z-index: 1;
+        height: 15vh;
+        object-fit: cover;
+    }
+
+    h3 {
+        font-size: 12px;
+        margin: 3px 3% 10px 3%;
+        // font-weight: 600;
+        color: #262626;
+    }
 }
 
 .item-name {
     margin-top: 10px;
 }
+
